@@ -1,0 +1,17 @@
+# Maintainer: Victor Tran <vicr12345 at gmail dot com>
+pkgname=plymouth-theme-bgrt-cactus
+pkgver=0.1
+pkgrel=3
+pkgdesc="Plymouth theme with Cactus branding"
+arch=("x86_64")
+depends=('plymouth')
+url="https://vicr123.com/cactus"
+license=('GPL3')
+source=('bgrt-cactus.tar.gz')
+sha256sums=('SKIP')
+
+package() {
+    mkdir -p $pkgdir/usr/share/plymouth/themes/bgrt-cactus/
+	cp * $pkgdir/usr/share/plymouth/themes/bgrt-cactus/
+    rm $pkgdir/usr/share/plymouth/themes/bgrt-cactus/bgrt-cactus.tar.gz
+}

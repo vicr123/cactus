@@ -1,0 +1,10 @@
+cactus-recovery-media/src
+cactus-recovery-media/pkg
+
+plymouth-git/plymouth
+
+*.pkg.tar.xz
+*.squashfs
+*.log
+*/src
+*/pkg
