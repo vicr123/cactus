@@ -11,7 +11,6 @@ chmod 700 /root
 # unset the root password
 passwd -d root
 
-sed -i 's/#\(PermitRootLogin \).\+/\1yes/' /etc/ssh/sshd_config
 sed -i "s/#Server/Server/g" /etc/pacman.d/mirrorlist
 
 systemctl enable plymouth-lightdm
