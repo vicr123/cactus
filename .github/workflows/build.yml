@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches:
+      - recovery-media
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Arch Linux
+      run: curl -L https://github.com/zaoqi/github-actions-archlinux/raw/master/install.sh | sh
+    - name: Build Root Image
+      run: |
+        sudo ./build.sh
+        ls
